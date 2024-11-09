@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		DF0E0BF12CDFD05E008D277B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0E0BF02CDFD05E008D277B /* AppDelegate.swift */; };
 		DF0E0BF32CDFD05E008D277B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0E0BF22CDFD05E008D277B /* SceneDelegate.swift */; };
-		DF0E0BF52CDFD05E008D277B /* ConverstationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0E0BF42CDFD05E008D277B /* ConverstationViewController.swift */; };
+		DF0E0BF52CDFD05E008D277B /* ConversationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0E0BF42CDFD05E008D277B /* ConversationViewController.swift */; };
 		DF0E0BF82CDFD05E008D277B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF0E0BF62CDFD05E008D277B /* Main.storyboard */; };
 		DF0E0BFA2CDFD06A008D277B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF0E0BF92CDFD06A008D277B /* Assets.xcassets */; };
 		DF0E0BFD2CDFD06A008D277B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF0E0BFB2CDFD06A008D277B /* LaunchScreen.storyboard */; };
@@ -19,13 +19,14 @@
 		DF0E0C102CDFDAE9008D277B /* VedioPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0E0C0F2CDFDAE9008D277B /* VedioPlayerViewController.swift */; };
 		DF0E0C122CDFDB1D008D277B /* NewConversationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0E0C112CDFDB1D008D277B /* NewConversationViewController.swift */; };
 		DF0E0C142CDFDB3A008D277B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0E0C132CDFDB3A008D277B /* ProfileViewController.swift */; };
+		DF0E0C172CDFE71A008D277B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0E0C162CDFE71A008D277B /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		DF0E0BED2CDFD05E008D277B /* Messanger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Messanger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF0E0BF02CDFD05E008D277B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DF0E0BF22CDFD05E008D277B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DF0E0BF42CDFD05E008D277B /* ConverstationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConverstationViewController.swift; sourceTree = "<group>"; };
+		DF0E0BF42CDFD05E008D277B /* ConversationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationViewController.swift; sourceTree = "<group>"; };
 		DF0E0BF72CDFD05E008D277B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DF0E0BF92CDFD06A008D277B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DF0E0BFC2CDFD06A008D277B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +37,7 @@
 		DF0E0C0F2CDFDAE9008D277B /* VedioPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VedioPlayerViewController.swift; sourceTree = "<group>"; };
 		DF0E0C112CDFDB1D008D277B /* NewConversationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewConversationViewController.swift; sourceTree = "<group>"; };
 		DF0E0C132CDFDB3A008D277B /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		DF0E0C162CDFE71A008D277B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,13 +82,12 @@
 		DF0E0C042CDFD875008D277B /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				DF0E0BF42CDFD05E008D277B /* ConverstationViewController.swift */,
-				DF0E0C092CDFDA9B008D277B /* LoginViewController.swift */,
+				DF0E0BF42CDFD05E008D277B /* ConversationViewController.swift */,
+				DF0E0C152CDFDD86008D277B /* Login */,
 				DF0E0C0F2CDFDAE9008D277B /* VedioPlayerViewController.swift */,
 				DF0E0C132CDFDB3A008D277B /* ProfileViewController.swift */,
 				DF0E0C112CDFDB1D008D277B /* NewConversationViewController.swift */,
 				DF0E0C0D2CDFDAD4008D277B /* PhotoViewerViewController.swift */,
-				DF0E0C0B2CDFDAC2008D277B /* RegisterViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -112,6 +113,7 @@
 			children = (
 				DF0E0BF02CDFD05E008D277B /* AppDelegate.swift */,
 				DF0E0BF22CDFD05E008D277B /* SceneDelegate.swift */,
+				DF0E0C162CDFE71A008D277B /* Extensions.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -123,6 +125,15 @@
 				DF0E0BFB2CDFD06A008D277B /* LaunchScreen.storyboard */,
 			);
 			path = StoryBoards;
+			sourceTree = "<group>";
+		};
+		DF0E0C152CDFDD86008D277B /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				DF0E0C092CDFDA9B008D277B /* LoginViewController.swift */,
+				DF0E0C0B2CDFDAC2008D277B /* RegisterViewController.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,7 +211,8 @@
 				DF0E0C0C2CDFDAC2008D277B /* RegisterViewController.swift in Sources */,
 				DF0E0C122CDFDB1D008D277B /* NewConversationViewController.swift in Sources */,
 				DF0E0C102CDFDAE9008D277B /* VedioPlayerViewController.swift in Sources */,
-				DF0E0BF52CDFD05E008D277B /* ConverstationViewController.swift in Sources */,
+				DF0E0BF52CDFD05E008D277B /* ConversationViewController.swift in Sources */,
+				DF0E0C172CDFE71A008D277B /* Extensions.swift in Sources */,
 				DF0E0BF12CDFD05E008D277B /* AppDelegate.swift in Sources */,
 				DF0E0C142CDFDB3A008D277B /* ProfileViewController.swift in Sources */,
 				DF0E0BF32CDFD05E008D277B /* SceneDelegate.swift in Sources */,
