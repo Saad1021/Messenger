@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class RegisterViewController: UIViewController {
     
@@ -95,11 +96,11 @@ class RegisterViewController: UIViewController {
         super.viewDidLoad()
         title = "Log In"
         view.backgroundColor = .white
-//        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Register"
-//                                                            , style: .done,
-//                                                            target: self,
-//                                                            action: #selector(didTapRegister))
-//        registerButton.addTarget(self, action: #selector(registerButtonTapped), for: .touchUpInside)
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Register"
+                                                            , style: .done,
+                                                            target: self,
+                                                            action: #selector(didTapRegister))
+        registerButton.addTarget(self, action: #selector(registerButtonTapped), for: .touchUpInside)
         
         emailField.delegate = self
         passwordField.delegate = self
@@ -171,10 +172,34 @@ class RegisterViewController: UIViewController {
             alertUserLoginError()
             return
         }
+//        firebase login
+        
+        DatabaseManager.shared.userExists(wth: email) { [weak self]exists in
+            guard let strongSelf = self else{
+                return
+            }
+            guard !exists else{
+//                user already exists
+                strongSelf.alertUserLoginError(message: "Looks like a user account for this email already exists ")  
+                return
+            }
+            FirebaseAuth.Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
+                
+                guard authResult != nil ,error == nil else{
+                    print("error creating user")
+                    return
+                }
+                DatabaseManager.shared.insertuser(with: ChatAppUser(firstName: firstName, lastName: lastName, emailAddress: email))
+                strongSelf.navigationController?.dismiss(animated: true, completion: nil)
+            }
+
+            
+        }
+                
     }
     
-    //    firebase login
-    func alertUserLoginError(){
+    
+    func alertUserLoginError(message:String = "Please enter all information to Create a New Account."){
         let alert = UIAlertController(title: "Woops", message: "Please enter all information to Create a New Account.", preferredStyle:.alert)
         alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel,handler: nil))
         present(alert, animated: true)
