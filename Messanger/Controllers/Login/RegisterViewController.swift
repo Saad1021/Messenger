@@ -174,7 +174,7 @@ class RegisterViewController: UIViewController {
         }
 //        firebase login
         
-        DatabaseManager.shared.userExists(wth: email) { [weak self]exists in
+        DatabaseManager.shared.userExists(with: email) { [weak self]exists in
             guard let strongSelf = self else{
                 return
             }

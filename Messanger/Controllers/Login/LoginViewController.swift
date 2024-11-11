@@ -7,7 +7,6 @@
 
 import UIKit
 import FirebaseAuth
-
 class LoginViewController: UIViewController {
 
     private let scrollView:UIScrollView = {

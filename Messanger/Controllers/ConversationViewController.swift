@@ -15,7 +15,7 @@ class ConversationViewController: UIViewController {
         view.backgroundColor = .red
     }
     override func viewDidAppear(_ animated: Bool) {
-        
+        validateAuth()
     }
     private func validateAuth(){
         if FirebaseAuth.Auth.auth().currentUser == nil{
